@@ -11,6 +11,9 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
+      self: {
+        src: __filename
+      },
       tasks: {
         src: 'tasks/**/*.js'
       }
