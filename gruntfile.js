@@ -17,6 +17,13 @@ module.exports = function(grunt) {
       tasks: {
         src: 'tasks/**/*.js'
       }
+    },
+    release: {
+      options: {
+        tagName: 'v<%= version %>',
+        commitMessage: '<%= version %>',
+        tagMessage: '<%= version %>'
+      }
     }
   });
 
@@ -24,6 +31,7 @@ module.exports = function(grunt) {
 
 
 grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-release');
 
 grunt.registerTask('test', ['jshint']);
 grunt.registerTask('default', ['test']);
