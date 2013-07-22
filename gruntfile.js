@@ -1,4 +1,3 @@
-var grunt = require('grunt');
 
 
 /**
@@ -27,11 +26,10 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-release');
+
+  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('default', ['test']);
+
 };
-
-
-grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-release');
-
-grunt.registerTask('test', ['jshint']);
-grunt.registerTask('default', ['test']);
