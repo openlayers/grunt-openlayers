@@ -1,0 +1,19 @@
+{
+  "name": "grunt-openlayers",
+  "version": "0.0.0",
+  "description": "Common Grunt tasks for OpenLayers",
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/openlayers/grunt-openlayers.git"
+  },
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-cli": "0.1.9",
+    "grunt-contrib-jshint": "0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
