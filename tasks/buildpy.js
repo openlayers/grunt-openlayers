@@ -14,10 +14,9 @@ module.exports = function(grunt) {
     var args = Array.prototype.slice.call(arguments);
     var done = this.async();
 
-    var options = this.options({});
-    if (!options.cwd) {
-      return done(new Error('Missing "cwd" property in buildpy options.'));
-    }
+    var options = this.options({
+      cwd: process.cwd()
+    });
 
     var py = cp.spawn('python', ['build.py'].concat(args), {cwd: options.cwd});
 
